@@ -1,6 +1,8 @@
 #include<LPC214X.h>
 void delay(int n)
-{for(int i=0;i<n;i++);}
+{int i;
+for(i=0;i<n;i++);
+}
 int main()
 {
 	IODIR0=0x00000001;
