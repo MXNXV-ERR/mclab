@@ -2,27 +2,26 @@
 void onwait()
 {
 	T0MR0=0x7974;
-	T0PR=0;
-	T0TCR=1;
+	T0PR=0;//pre scalar factor=0
+	T0TCR=1;//Enable the timer
 	while(!(T0TC==T0MR0));
-	T0TCR=3;
+	T0TCR=3;//Stop and reset timer
 }
 void offwait()
 {
 	T0MR0=0xB630;
-	T0PR=1;
-	T0TCR=1;
+	T0PR=1;//pre scalar factor=1
+	T0TCR=1;//Enable the timer
 	while(!(T0TC==T0MR0));
-	T0TCR=3;
+	T0TCR=3;//Stop and reset timer
 }
 
 
 int main()
 {
-	//T0MR1=0x000034ff;
-	T0MCR=0X4;
+	T0MCR=0X4;//reset the match registers at entry
 	
-	IODIR0=1<<16;
+	IODIR0=1<<16;//port 0 pin 16(left shifted)
 	while(1)
 	{
 		IOSET0=1<<16;
