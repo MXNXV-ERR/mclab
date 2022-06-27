@@ -1,7 +1,7 @@
 #include<LPC214x.h>
 void onwait()
 {
-	T0MR0=0x7974;
+	T0MR0=0x7A11;
 	T0PR=0;//pre scalar factor=0
 	T0TCR=1;//Enable the timer
 	while(!(T0TC==T0MR0));
@@ -9,7 +9,7 @@ void onwait()
 }
 void offwait()
 {
-	T0MR0=0xB630;
+	T0MR0=0xB71A;
 	T0PR=1;//pre scalar factor=1
 	T0TCR=1;//Enable the timer
 	while(!(T0TC==T0MR0));
