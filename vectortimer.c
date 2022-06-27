@@ -4,9 +4,9 @@ __irq void Timer0_ISR()
 {
 	x^=1;
 	if(x)
-		IOSET1=1<<20;
+		IOSET1=0xFFFFFFFF;//1<<20;better make all pins as output so u dont have find in logic analyser
 	else
-		IOCLR1=1<<20;
+		IOCLR1=0XFFFFFFFF;//1<<20;
 	T0IR=0x01;
 	VICVectAddr=0x0000000h;
 }
