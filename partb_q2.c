@@ -2,7 +2,7 @@
 void onwait()
 {
 	T0MR0=0x7A11;
-	T0PR=0;//pre scalar factor=0
+	T0PR=0;//pre scalar factor=0 (not required)
 	T0TCR=1;//Enable the timer
 	while(!(T0TC==T0MR0));
 	T0TCR=3;//Stop and reset timer
@@ -10,6 +10,7 @@ void onwait()
 void offwait()
 {
 	T0MR0=0xB71A;
+	//T0MR0=0x16E35 if T0PR=0
 	T0PR=1;//pre scalar factor=1
 	T0TCR=1;//Enable the timer
 	while(!(T0TC==T0MR0));
