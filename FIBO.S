@@ -1,6 +1,6 @@
 	AREA FIBO,CODE
 	LDR R0,=FIBO_TERMS
-	MOV R1,#0tttttt
+	MOV R1,#0
 	MOV R2,#1
 	MOV R3,#8
 	STRB R1,[R0],#1
