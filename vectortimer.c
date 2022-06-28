@@ -12,7 +12,7 @@ __irq void Timer0_ISR()
 }
 int main()
 {
-	IODIR1=0x0fffffff;
+	IODIR1=0xffffffff;
 	T0MCR=0x03;
 	T0MR0=0x3456ff;
 	VICVectAddr4=(unsigned)Timer0_ISR;
