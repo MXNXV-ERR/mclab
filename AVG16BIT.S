@@ -15,7 +15,7 @@ DIVIDE
 	BPL DIVIDE
 	ldr r0, =AVG
 	STRH R4,[R0]
-NOS dcw 0x500, 0x400, 0x300, 0x200, 0x100
+NOS dcw 0x500, 0x400, 0x300, 0x200, 0x100 ;Enter ten numbers here
 GO	B GO
 	AREA NUMBER,DATA
 ;NOS space 20
