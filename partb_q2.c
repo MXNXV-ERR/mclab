@@ -20,7 +20,7 @@ void offwait()
 
 int main()
 {
-	T0MCR=0X4;//reset the match registers at entry
+	T0MCR=0X4;//stop on match
 	
 	IODIR0=1<<16;//port 0 pin 16(left shifted)
 	while(1)
