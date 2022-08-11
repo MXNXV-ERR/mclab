@@ -1,6 +1,6 @@
 	AREA AVG16BIT,CODE
 	LDR R0,=NOS
-	MOV R1,#4
+	MOV R1,#4 ;Put #9 if 10 numbers are asked
 	LDRH R2,[R0],#2
 NEXT
 	LDRH R3,[R0],#2
